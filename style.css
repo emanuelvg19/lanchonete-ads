@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Centralização com Flexbox */
+.container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+
+    /* Adicionando uma imagem de fundo para computadores */
+    background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('img/siri-cascudo-desktop.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+/* Estilização do Cartão */
+.card-login {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+
+}
+
+.card-login h1 {
+    color: #e63946;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card-login p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Organização dos Inputs */
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #d62828;
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    .container-login {
+        /* Fundo específico para celular */
+        background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("img/siri-cascudo-mobile.jpg");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 480px) {
+    .card-login {
+        width: calc(100% - 30px);
+        padding: 25px;
+    }
+}
+
+/* Mensagem de erro da validação */
+.erro {
+color: red !important;
+text-align: center;
+margin-top: 10px;
+margin-bottom: 0 !important;
+font-size: 14px;
+}
