@@ -1,64 +1,62 @@
+
 const form = document.getElementById('form-cadastro');
 
 form.addEventListener('submit', function(event) {
-// Impede o recarregamento da página
-event.preventDefault();
+    // Impede o recarregamento da página
+    event.preventDefault();
 
-// Capturando os valores dos campos
-const senha = document.getElementById('senha').value;
-const confirmaSenha = document.getElementById('confirma-senha').value;
+    // Captura os valores dos campos
+    const senha = document.getElementById('senha').value;
+    const confirmaSenha = document.getElementById('confirma-senha').value;
 
-// Procura uma mensagem de erro que já exista
-const mensagemErroExistente = document.getElementById('mensagem-erro');
+    // Remove uma mensagem anterior, se existir
+    const mensagemErroExistente = document.getElementById('mensagem-erro');
 
-// Se já existir uma mensagem, remove antes de fazer uma nova validação
-if (mensagemErroExistente) {
-    mensagemErroExistente.remove();
-}
+    if (mensagemErroExistente) {
+        mensagemErroExistente.remove();
+    }
 
-// Requisito 2: verifica se a senha possui no mínimo 6 caracteres
-if (senha.length < 6) {
-    const mensagemErro = document.createElement('p');
+    const mensagemSucessoExistente = document.getElementById('mensagem-sucesso');
 
-    mensagemErro.id = 'mensagem-erro';
-    mensagemErro.textContent = 'A senha deve ter no mínimo 6 caracteres.';
-    mensagemErro.classList.add('erro');
+    if (mensagemSucessoExistente) {
+        mensagemSucessoExistente.remove();
+    }
 
-    form.appendChild(mensagemErro);
+    // Valida o tamanho da senha
+    if (senha.length < 6) {
+        const mensagemErro = document.createElement('p');
 
-    return;
-}
+        mensagemErro.id = 'mensagem-erro';
+        mensagemErro.textContent = 'A senha deve ter no mínimo 6 caracteres.';
+        mensagemErro.classList.add('erro');
 
-// Requisito 3: verifica se as senhas são exatamente iguais
-if (senha !== confirmaSenha) {
-    const mensagemErro = document.createElement('p');
+        form.appendChild(mensagemErro);
+        return;
+    }
 
-    mensagemErro.id = 'mensagem-erro';
-    mensagemErro.textContent = 'As senhas não são iguais.';
-    mensagemErro.classList.add('erro');
+    // Valida se as senhas são iguais
+    if (senha !== confirmaSenha) {
+        const mensagemErro = document.createElement('p');
 
-    form.appendChild(mensagemErro);
+        mensagemErro.id = 'mensagem-erro';
+        mensagemErro.textContent = 'As senhas não são iguais.';
+        mensagemErro.classList.add('erro');
 
-    return;
+        form.appendChild(mensagemErro);
+        return;
+    }
 
-}
+    // Cadastro validado com sucesso
+    const divMensagem = document.createElement('p');
 
-/* Se chegou aqui, as duas validações foram aprovadas - ativar depois se der erro.
-console.log("Cadastro realizado com sucesso!");
-
-const nomeDigitado = document.getElementById('nome').value;
-console.log("Cliente:", nomeDigitado);
-
-// Redireciona o usuário para o cardápio
-window.location.href = "cardapio.html"; até aqui */ 
-
-// Cenário de Sucesso
+    divMensagem.id = 'mensagem-sucesso';
     divMensagem.textContent = 'Cadastro realizado com sucesso! Entrando...';
-    divMensagem.className = 'msg-sucesso';
-    
-    // NOVO CÓDIGO: Redireciona o usuário para o cardápio após 1 segundo (1000 milissegundos)
-    setTimeout(() => {
-        window.location.href = "cardapio.html";
-    }, 1000);
+    divMensagem.classList.add('msg-sucesso');
 
+    form.appendChild(divMensagem);
+
+    // Redireciona para o cardápio após 1 segundo
+    setTimeout(() => {
+        window.location.href = 'cardapio.html';
+    }, 1000);
 });

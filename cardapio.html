@@ -5,129 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos-cardapio.css">
     <title>Siri Cascudo</title>
-
 </head>
 <body>
 
+<!-- Faixa Principal do Topo -->
 <header class="cabecalho">
-    <h1>🍔 Siri Cascudo</h1>
-    
-    <!-- Agrupamos os botões da direita em uma div para organizar melhor -->
-    <div style="display: flex; gap: 15px; align-items: center;">
-        
-        <div class="info-carrinho" id="abrir-carrinho" style="cursor: pointer;">
-            🛒 Carrinho: <span id="contador-itens">0</span> itens
+    <h1 class="cabecalho-titulo">🍔 Siri Cascudo</h1>
+
+    <div class="cabecalho-acoes">
+        <!-- Carrinho com as classes de apoio corretas -->
+        <div class="info-carrinho" id="abrir-carrinho">
+            <span class="texto-carrinho">🛒 Carrinho</span>
+            <span class="contador-carrinho"><span id="contador-itens">0</span> itens</span>
         </div>
 
-        <!-- NOVO CÓDIGO: Botão que aponta de volta para o index.html -->
         <a href="index.html" class="btn-sair">Sair</a>
-
     </div>
 </header>
 
+<main>
+    <!-- Faixa de Destaque: Lanches -->
+    <div class="titulo-secao">
+        <span></span>
+        <h2>Lanches</h2>
+        <span></span>
+    </div>
 
-<!-- <header> testando novos comandos
-    <h1>Siri Cascudo</h1>
-    <div class="info-carrinho" id="abrir-carrinho" style="cursor: pointer;">🛒 Carrinho: <span id="contador-itens">0</span></div>
-</header> -->
+    <section class="vitrine-grid">
+        <article class="card-produto">
+            <img src="img/hamburguer-de-siri.jpg" alt="Hamburguer de Siri" class="imagem-produto">
+            <div class="conteudo-card">
+                <h3>Hamburguer de Siri</h3>
+                <p>O clássico da casa! Hamburguer de siri, alface fresco, tomate, queijo cheddar e molho especial no pão brioche.</p>
+                <span class="preco-destaque">R$ 30,00</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+        </article>
+        <article class="card-produto">
+            <img src="img/hamburguer-duplo-de-siri.jpg" alt="Hamburguer Duplo de Siri" class="imagem-produto">
+            <div class="conteudo-card">
+                <h3>Hamburguer Duplo de Siri</h3>
+                <p>Dois hamburgueres de siri, alface fresco, tomate, queijo cheddar e molho especial no pão brioche.</p>
+                <span class="preco-destaque">R$ 35,00</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+        </article>
+        <article class="card-produto">
+            <img src="img/x-siri.jpg" alt="X-Siri" class="imagem-produto">
+            <div class="conteudo-card">
+                <h3>X-Siri</h3>
+                <p>Hamburguer de siri, bacon crocante, queijo cheddar, alface, tomate e molho da casa</p>
+                <span class="preco-destaque">R$ 32,00</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+        </article>
+        <article class="card-produto">
+            <img src="img/porcao-de-aneis-do-mar.jpg" alt="Porção de Anéis do Mar" class="imagem-produto">
+            <div class="conteudo-card">
+                <h3>Porção de Anéis do Mar</h3>
+                <p>Anéis empanados e crocantes, acompanhados de molho especial..</p>
+                <span class="preco-destaque">R$ 19,90</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+        </article>
+        <article class="card-produto">
+            <img src="img/batata-do-siri.jpg" alt="Batata do Siri" class="imagem-produto">
+            <div class="conteudo-card">
+                <h3>Batata do Siri</h3>
+                <p>Batatas crocantes, cobertas com cheddar cremoso, bacon e temperos especiais do fundo do mar.</p>
+                <span class="preco-destaque">R$ 19,90</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+        </article>
+        <article class="card-produto">
+            <img src="img/pastel-de-siri.jpg" alt="Pastel de Siri" class="imagem-produto">
+            <div class="conteudo-card">
+                <h3>Pastel de Siri</h3>
+                <p>Pastel crocante recheado com carne de siri e temperos especiais</p>
+                <span class="preco-destaque">R$ 10,00</span>
+                <button class="btn-adicionar">Adicionar</button>
+            </div>
+        </article>
+    </section>
 
-<main class="vitrine-grid">
-    <article class="card-produto">
-        <img src="img/hamburguer.jpg" alt="X-Burguer Clássico" class="imagem-produto">
-        <div class="conteudo-card">
-            <h3>X-Burguer Clássico</h3>
-            <p>Pão brioche, hambúrguer artesanal de 160g e queijo cheddar.</p>
-            <span class="preco-destaque">R$ 28,00</span>
-            <button class="btn-adicionar">Adicionar</button>
+    <!-- Faixa de Destaque: Bebidas -->
+    <section class="secao-bebidas">
+        <div class="titulo-secao">
+            <span></span>
+            <h2>Bebidas</h2>
+            <span></span>
         </div>
-    </article>
-    <article class="card-produto">
-        <img src="img/hamburguer.jpg" alt="X-Burguer Clássico" class="imagem-produto">
-        <div class="conteudo-card">
-            <h3>X-Burguer Clássico</h3>
-            <p>Pão brioche, hambúrguer artesanal de 160g e queijo cheddar.</p>
-            <span class="preco-destaque">R$ 28,00</span>
-            <button class="btn-adicionar">Adicionar</button>
-        </div>
-    </article>
-    <article class="card-produto">
-        <img src="img/hamburguer.jpg" alt="X-Burguer Clássico" class="imagem-produto">
-        <div class="conteudo-card">
-            <h3>X-Burguer Clássico</h3>
-            <p>Pão brioche, hambúrguer artesanal de 160g e queijo cheddar.</p>
-            <span class="preco-destaque">R$ 28,00</span>
-            <button class="btn-adicionar">Adicionar</button>
-        </div>
-    </article>
-    <article class="card-produto">
-        <img src="img/hamburguer.jpg" alt="X-Burguer Clássico" class="imagem-produto">
-        <div class="conteudo-card">
-            <h3>X-Burguer Clássico</h3>
-            <p>Pão brioche, hambúrguer artesanal de 160g e queijo cheddar.</p>
-            <span class="preco-destaque">R$ 28,00</span>
-            <button class="btn-adicionar">Adicionar</button>
-        </div>
-    </article>
-    <article class="card-produto">
-        <img src="img/hamburguer.jpg" alt="X-Burguer Clássico" class="imagem-produto">
-        <div class="conteudo-card">
-            <h3>X-Burguer Clássico</h3>
-            <p>Pão brioche, hambúrguer artesanal de 160g e queijo cheddar.</p>
-            <span class="preco-destaque">R$ 28,00</span>
-            <button class="btn-adicionar">Adicionar</button>
-        </div>
-    </article>
-    <article class="card-produto">
-        <img src="img/hamburguer.jpg" alt="X-Burguer Clássico" class="imagem-produto">
-        <div class="conteudo-card">
-            <h3>X-Burguer Clássico</h3>
-            <p>Pão brioche, hambúrguer artesanal de 160g e queijo cheddar.</p>
-            <span class="preco-destaque">R$ 28,00</span>
-            <button class="btn-adicionar">Adicionar</button>
-        </div>
-    </article>
 
+        <div class="vitrine-grid">
+            <article class="card-produto">
+                <img src="img/refrigerante.jpg" alt="Refrigerante" class="imagem-produto">
+                <div class="conteudo-card">
+                    <h3>Refrigerante</h3>
+                    <p>Coca, Fanta Laranja, Fanta Uva, Delrio Guaraná</p>
+                    <span class="preco-destaque">R$ 8,00</span>
+                    <button class="btn-adicionar btn-bebida">Adicionar</button>
+                </div>
+            </article>
+
+            <article class="card-produto">
+                <img src="img/suco.jpg" alt="Suco" class="imagem-produto">
+                <div class="conteudo-card">
+                    <h3>Suco</h3>
+                    <p>Abacaxi, Manga, Laranja, Maracujá</p>
+                    <span class="preco-destaque">R$ 4,00</span>
+                    <button class="btn-adicionar btn-bebida">Adicionar</button>
+                </div>
+            </article>
+
+            <article class="card-produto">
+                <img src="img/agua.jpg" alt="Água" class="imagem-produto">
+                <div class="conteudo-card">
+                    <h3>Água</h3>
+                    <p>Com gás, sem gás</p>
+                    <span class="preco-destaque">R$ 2,00</span>
+                    <button class="btn-adicionar btn-bebida">Adicionar</button>
+                </div>
+            </article>
+        </div>
+    </section>
 </main>
-
-
-<section class="secao-bebidas">
-    <span></span>
-    <h2>Bebidas</h2>
-    <span></span>
-<div class="vitrine-grid">
-
-    <article class="card-produto">
-        <img src="img/refrigerante.jpg" alt="Refrigerante" class="imagem-produto">
-        <div class="conteudo-card">
-            <h3>Refrigerante</h3>
-            <p>Coca, Fanta Laranja, Fanta Uva, Delrio Guaraná</p>
-            <span class="preco-destaque">R$ 8,00</span>
-            <button class="btn-adicionar btn-bebida">Adicionar</button>
-        </div>
-    </article>
-
-    <article class="card-produto">
-        <img src="img/suco.jpg" alt="Suco" class="imagem-produto">
-        <div class="conteudo-card">
-            <h3>Suco</h3>
-            <p>Abacaxi, Manga, Laranja, Maracujá</p>
-            <span class="preco-destaque">R$ 4,00</span>
-            <button class="btn-adicionar btn-bebida">Adicionar</button>
-        </div>
-    </article>
-
-    <article class="card-produto">
-        <img src="img/agua.jpg" alt="Água" class="imagem-produto">
-        <div class="conteudo-card">
-            <h3>Água</h3>
-            <p>Com gás, sem gás</p>
-            <span class="preco-destaque">R$ 2,00</span>
-            <button class="btn-adicionar btn-bebida">Adicionar</button>
-        </div>
-    </article>
-</div>
-
-</section>
 
 <!-- O Carrinho Lateral -->
 <aside id="sidebar-carrinho" class="carrinho-oculto">
@@ -136,11 +137,10 @@
         <button id="fechar-carrinho" class="btn-fechar">X</button>
     </div>
     
-    <!-- Aqui os itens serão injetados pelo JS depois -->
     <ul id="lista-carrinho" class="carrinho-itens"></ul>
 
     <div class="carrinho-rodape">
-        <h3>Total: R$ <span id="valor-total"></span></h3>
+        <h3>Total: R$ <span id="valor-total">0,00</span></h3>
         <button class="btn-finalizar">Finalizar Compra</button>
     </div>
 </aside>

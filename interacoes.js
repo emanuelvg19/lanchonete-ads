@@ -1,4 +1,4 @@
- // Seleciona os elementos do HTML
+// Seleciona os elementos do HTML
 const botoesAdicionar = document.querySelectorAll('.btn-adicionar');
 const contadorHtml = document.getElementById('contador-itens');
 const listaCarrinho = document.getElementById('lista-carrinho');
